@@ -39,7 +39,7 @@ for (n in 1:16) {
       break
     }
     subgroup = construct_near_oracle_subgroup(n, num_candidates, ii, leak_l1,
-                                              group = construct_oracle_subgroup(n))
+                                              group = construct_oracle_subgroup(ii))
 
     temp_list[[counter]] = subgroup
     counter = counter + 1
