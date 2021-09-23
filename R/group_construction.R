@@ -28,13 +28,15 @@ library(tidyverse)
 #
 # list.files("data-raw", full.names = TRUE)[1:12] %>% map(source)
 
+max_rank = 10
+max_order = 2^max_rank
 
 num_candidates = 100000
-for (n in 1:10) {
+for (n in 17:64) {
   temp_list = list()
   subgroup = NULL
   counter = 1
-  for (ii in 2^(1:10)) {
+  for (ii in 2^(1:max_rank)) {
     if (2^n < ii) {
       break
     }
@@ -47,7 +49,7 @@ for (n in 1:10) {
     counter = counter + 1
   }
 
-  name = paste0("l1_100k_subgroups_max256_", n)
+  name = paste0("l1_100k_subgroups_max", max_order, "_n", n)
   assign(name, temp_list)
   usethis::use_data_raw(name)
 
