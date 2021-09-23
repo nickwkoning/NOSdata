@@ -30,11 +30,11 @@ library(tidyverse)
 
 
 num_candidates = 100000
-for (n in 1:16) {
+for (n in 1:10) {
   temp_list = list()
   subgroup = NULL
   counter = 1
-  for (ii in 2^(1:8)) {
+  for (ii in 2^(1:10)) {
     if (2^n < ii) {
       break
     }
