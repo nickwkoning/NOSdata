@@ -20,12 +20,12 @@ doParallel::registerDoParallel(cl = my.cluster)
 # parameters
 
 
-leak_fun = leak_l1
-one_sided = FALSE
+leak_fun = leak_mean
+one_sided = TRUE
 max_rank = 10
 max_order = 2^max_rank
 num_candidates = 100000
-N_set = 12:22
+N_set = 1:256
 
 subgroup_list_list = foreach(
   n = N_set,
