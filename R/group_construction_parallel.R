@@ -21,6 +21,7 @@ doParallel::registerDoParallel(cl = my.cluster)
 
 
 leak_fun = leak_l1
+one_sided = FALSE
 max_rank = 10
 max_order = 2^max_rank
 num_candidates = 100000
@@ -30,7 +31,7 @@ subgroup_list_list = foreach(
   n = N_set,
   .packages= c('NOS', 'tidyverse')
 ) %dopar% {
-  subgroup_list = construct_near_oracle_subgroup_path(n, num_candidates, max_rank, leak_fun)
+  subgroup_list = construct_near_oracle_subgroup_path(n, num_candidates, max_rank, leak_fun, one_sided)
   subgroup_list
 }
 
