@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: Koning
     given-names: N.W.
-title: "Near Oracle Subgroups database"
+title: "Database of Near Oracle Subgroups"
 version: 0.1
 date-released: 2022-01-25
 url: "https://github.com/nickwkoning/NOSdata"
