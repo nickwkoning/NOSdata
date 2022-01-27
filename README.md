@@ -1,6 +1,8 @@
 # NOSdata
-Data package containing a collection of 'near-oracle' subgroups of the sign-flipping group. Each subgroup is represented as an n by m matrix, where n is the number of signs and m is the order of the group. Each column corresponds to an element of the group, under element-wise multiplication. The identity element is contained in the first column.
+Data package containing a database of 'near-oracle' subgroups of the sign-flipping group. Each subgroup is represented as an n by m matrix, where n is the number of signs and m is the order of the group. Each column corresponds to an element of the group, under element-wise multiplication. The identity element is contained in the first column.
 
+# Construction
+The package also contains two files that were used to generate the near-oracle subgroups ([group_construction.R](https://github.com/nickwkoning/NOSdata/blob/main/R/group_construction.R), [group_construction_parallel.R](https://github.com/nickwkoning/NOSdata/blob/main/R/group_construction_parallel.R)). These are based on the algorithm described in Koning & Hemerik (2022), and can be used to construct near-oracle subgroups that are not currently stored in the database.
 
 # Installation
 You can install the data package using:
